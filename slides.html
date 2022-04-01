@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sequía en Chile Central</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Francisco Zambrano" />
+    <meta name="date" content="2022-04-01" />
+    <script src="slides_files/header-attrs/header-attrs.js"></script>
+    <script src="slides_files/xaringanExtra_fit-screen/fit-screen.js"></script>
+    <link rel="stylesheet" href="my-theme.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Sequía en Chile Central
+## Análisis basado en vegetación, precipitación y evapotranspiración
+### Francisco Zambrano
+### 2022-04-01
+
+---
+
+class: inverse center middle
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(https://i.ibb.co/W05VNqL/logo-hemera-umayor.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://i.ibb.co/W05VNqL/logo-hemera-umayor.png'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+# 1 Contexto
+---
+## 1.1 Cambio Climatico
+
+&lt;img src="figs/climate_change.gif" width="40%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="figs/2021-climate-change-map.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+
+---
+## 1.2 Cuenca Río Aconcagua: Lago Peñuelas
+
+&lt;img src="figs/lago_peñuela.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+---
+## 1.3 Cuenca Río Aconcagua: cambio uso de suelo
+.pull-left[
+![](figs/cambio_forestal_paltos.png)
+]
+.pull-right[
+![](figs/evolucion_paltos_aconcagua.png)
+]
+
+---
+## 1.4 Objetivos
+
+### General
+
+Estudiar la sequía en Chile Central basado en datos satelitales de disponibilidad y demanda de agua entre 2000-2022 considerando la temporada de desarrollo de la vegetación.
+
+
+### Específicos
+
+- Analizar la interrelación entre precipitación y proxy de productividad de la vegetación.
+
+- Analizar la interrelación entre evapotranspiración y proxy de productividad de la vegetación.
+
+- Analizar los cambios en la cobertura de la vegetación .
+
+
+
+
+
+---
+class: inverse center middle
+
+# 2 Métodos
+
+---
+background-image: url("figs/map_study_area_join.png")
+background-position: 50% 50%
+background-size: contain
+
+## 2.1 Área de Estudio
+
+---
+## 2.2 Datos
+
+- Estimaciones de precipitación
+  - CHIRPS 2.0: 1981-ahora, 5 km resolución espacial
+
+- Vegetación
+  - Landcover MODIS `MCD12Q1.006`: 2000-2019, anual, 500 m RE (resolución espacial)
+  - Fenología MODIS `MCD12Q2.006`: 2000-2019, 500 m RE
+  - Índices de Vegetación MODIS `MOD13A2.006`: 2000-ahora, 16 días, 1 km RE
+  - Evapotranspiración MODIS `MOD16A2.006`: 2000-ahora, 8 días, 500 m RE
+  - Cobertura de Vegetación MODIS `MOD44B.006`: 2000-ahora, anual, 250 m RE  
+
+---
+## 2.3 Variables
+
+- Precipitación
+  - Índices Estandarizado de Precipitacion (SPI) 3, 6, 12 y 24 meses.
+
+- Vegetación
+  - NDVI acumulado en la temporada (zcNDVI)
+  - ET acumulada en la temporada (zcET)
+  - Porcentaje de pixel sin vegetación (PNV)
+  
+---
+## 2.4 Periodo de análisis a nivel de pixel
+
+.pull-left[
+&lt;img src="figs/sos_eos_los.png" width="125%" /&gt;
+]
+.pull-right[
+&lt;img src="figs/landcover_sos_eos.png" width="75%" /&gt;
+]
+
+---
+class: inverse center middle
+
+# 3 Resultados
+
+---
+## 3.1 Precipitación
+
+&lt;img src="figs/maps_spi12_2000-2021.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="figs/timeseries_2000-2021_SPI12_SPI24.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+## 3.2 Proxy de productividad de la vegetación
+
+&lt;img src="figs/map_zcNDVI_ts_clusters.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+## 3.3 Landcover
+
+&lt;img src="figs/LC_perZoneAndCluster.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+## 3.3 Proxy de productividad de la vegetación
+
+&lt;img src="figs/timeseries_2000-2021_zcNDVI.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+## 3.3 Evapotranspiración
+
+&lt;img src="figs/timeseries_2000-2021_zcET.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+## 3.3 Porcentaje sin vegetación (PNV)
+
+&lt;img src="figs/timeseries_2000-2021_zPNV.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+## 3.4 `\(R^2\)` zcNDVI vs SPIs
+
+&lt;img src="figs/fig_map_cor_SPI_zcNDVI_EOS_1983-2020.png" width="75%" style="display: block; margin: auto;" /&gt;
+---
+## 3.5 `\(R^2\)` zcNDVI vs ET
+
+.pull-left[
+- La correlación entre productividad y demanda de agua (ET) presenta un patron longitudinal.
+
+- En la zona centro norte la variación temporal en la productividad (zcNDVI) está siendo explicada (&gt;80%) por la variación en la demanda de agua (ET).
+
+- Los valores de `\(R^2\)` estarían relacionados a la disminución de la disponibilidad de agua (ej., lluvia, aguas subterránes) en la zona centro norte y en menor medida a una disminución en la cobertura de vegetación.
+
+]
+
+.pull-right[
+&lt;img src="figs/r2_zcndvi_zcet.png" width="30%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+class: inverse center middle
+
+# ¿Qué sigue?
+
+---
+background-image: url("figs/anim_dem_aconcagua.gif")
+background-position: 50% 50%
+background-size: contain
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
