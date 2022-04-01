@@ -207,13 +207,18 @@ knitr::include_graphics("figs/timeseries_2000-2021_zPNV.png")
 ```
 
 ---
-## 3.4 $R^2$ zcNDVI vs SPIs
+## 3.4 $R^2$: zcNDVI vs SPIs
 
 ```{r, echo=FALSE, out.width="75%",fig.align="center"}
 knitr::include_graphics("figs/fig_map_cor_SPI_zcNDVI_EOS_1983-2020.png")
 ```
 ---
-## 3.5 $R^2$ zcNDVI vs ET
+background-image: url("figs/r2_zcndvi_zcet.png")
+background-position: 70% 50%
+background-size: contain
+
+## 3.5 $R^2$: zcNDVI vs ET
+
 
 .pull-left[
 - La correlación entre productividad y demanda de agua (ET) presenta un patron longitudinal.
@@ -224,16 +229,11 @@ knitr::include_graphics("figs/fig_map_cor_SPI_zcNDVI_EOS_1983-2020.png")
 
 ]
 
-.pull-right[
-```{r, echo=FALSE, out.width="30%",fig.align="center"}
-knitr::include_graphics("figs/r2_zcndvi_zcet.png")
-```
-]
 
 ---
 class: inverse center middle
 
-# ¿Qué sigue?
+# ¿En qué estamos?
 
 ---
 background-image: url("figs/anim_dem_aconcagua.gif")
